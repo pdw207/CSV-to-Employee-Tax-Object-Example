@@ -9,7 +9,7 @@ describe Employee do
 	let(:employee) {Employee.new({"first_name" => "Paul",
 															 "last_name" => "Wilson",
 															 "annual_income" => "3500",
-															 "paid_tax" => "10", "tax_rate" => "35"})}
+															 "tax_paid" => "10", "tax_rate" => "35"})}
 
 	it 'exists' do
 		expect(employee.class).to eq(Employee)
@@ -28,7 +28,7 @@ describe Employee do
 	end
 
 	it 'has taxes paid' do
-		expect(employee.paid_tax).to eq(10)
+		expect(employee.tax_paid).to eq(10)
 	end
 
 	it 'has tax rate' do
